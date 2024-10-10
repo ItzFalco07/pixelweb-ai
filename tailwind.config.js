@@ -39,6 +39,10 @@ module.exports = {
   				DEFAULT: 'hsl(var(--destructive))',
   				foreground: 'hsl(var(--destructive-foreground))'
   			},
+            primary2: {
+                DEFAULT: 'hsl(var(--primary2))',
+                foreground: 'hsl(var(--primary2-foreground))'      
+            },
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
