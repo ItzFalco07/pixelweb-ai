@@ -19,7 +19,9 @@ import {
 } from "@/components/ui/table";
 
 // Ensure that localStorage has valid JSON data
+useEffect(()=> {
 const data = JSON.parse(localStorage.getItem('GeneratedSites')) || [];
+},[])
 
 export const columns = [
   {
