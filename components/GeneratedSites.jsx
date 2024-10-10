@@ -18,11 +18,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-// Ensure that localStorage has valid JSON data
-useEffect(()=> {
-const data = JSON.parse(localStorage.getItem('GeneratedSites')) || [];
-},[])
-
 export const columns = [
   {
     accessorKey: "name",
@@ -47,6 +42,14 @@ export const columns = [
 
 export default function GeneratedSites() {
   const [sorting, setSorting] = React.useState([]);
+  const [data, setData] = React.useState([]);
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedData = JSON.parse(localStorage.getItem('GeneratedSites')) || [];
+      setData(storedData);
+    }
+  }, []);
 
   const table = useReactTable({
     data,
