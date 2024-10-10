@@ -1,3 +1,5 @@
+"use client";
+
 import {useRef, useEffect} from 'react';
 import {LoaderCircle} from 'lucide-react';
 import Link from 'next/link';
