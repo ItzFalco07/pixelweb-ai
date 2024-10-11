@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 export async function POST(req) {
   try {
     const { Input } = await req.json(); // Extract prompt from the request body
-    const EditedInput = "Make a modern and beautiful webpage (all  in only one file), use tailwind and add cool animations to it, dont give me any other text than code (only code), You may use random image generator (dont use unsplash). If theme not included in description then use dark theme. description of the website: " + Input
+    const EditedInput = "Make a modern webpage (all  in only one file), dont give me any any text (only code), use image generator for dummy images (dont use unsplash). Use tailwind, animations, hover effects, dark theme. description of website: " + Input
     if (!Input) {
       return new Response(JSON.stringify({ error: "Input is required" }), { status: 400 });
     }
