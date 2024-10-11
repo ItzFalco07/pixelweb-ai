@@ -77,7 +77,7 @@ const createNewSite = async (siteName) => {
 
 const deployToSite = async (htmlString, siteId) => {
     try {
-        const response = await axios.post(process.env.NEXT_PUBLIC_BACKEND_URL, {
+        const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/uploadToSite`, {
             htmlString,
             siteId,
         });
